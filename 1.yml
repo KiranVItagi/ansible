@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+    - name: git_installation
+      apt:
+        name: git
+        state: present
+    - name: file_copy
+      copy:
+        src: /root/1.yml
+        dest: /root
