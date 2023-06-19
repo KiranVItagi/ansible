@@ -1,0 +1,14 @@
+---
+- hosts: all
+  gather_facts: no
+  tasks:
+    - name: initialize directory path
+      set_fact:
+         dir_path: "/root/testing"
+    - name: "creating {{ dir_path }} directory"
+      file:
+        path: "{{ dir_path }}"
+        state: directory
+
+
+
